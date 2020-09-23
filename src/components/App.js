@@ -8,15 +8,15 @@ class App extends Component {
   render() {
     return (
       <main className="page bg-white">
-        <div className="container">
-          <h1>GALERIE</h1>
-            <nav>
-              <ul>
-                <li>TOUS</li>
-                <li>MODERNES</li>
-                <li>CONTEMPORAINS</li>
-                <li>PORTRAITS</li>
-                <li>PAYSAGES</li>
+        <h1>GALERIE</h1>
+        <div className="navbar navbar-expand-lg container">
+            <nav className="collapse navbar-collapse justify-content-end">
+              <ul className="navbar-nav">
+                <li className="nav-item">TOUS</li>
+                <li className="nav-item">MODERNES</li>
+                <li className="nav-item">CONTEMPORAINS</li>
+                <li className="nav-item">PORTRAITS</li>
+                <li className="nav-item"i>PAYSAGES</li>
               </ul>
             </nav>
         </div>

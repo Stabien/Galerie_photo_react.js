@@ -12,18 +12,15 @@ class DisplayImages extends Component {
     fetch('./data.json')
       .then(response => response.json())
       .then(result => {
-        const images = result.map(item => {
-          return item;
-        });
         this.setState({
-          myImages: images
+          myImages: result
         })
       });
   }
 
   render() {
     const listItems = this.state.myImages.map(item => (
-      <div className="col-4">
+      <div className="col-lg-4 col-md-6">
         <img src={item.path} alt="images"/>
       </div>
     ));
