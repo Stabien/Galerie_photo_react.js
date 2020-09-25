@@ -1,50 +1,66 @@
 [
   {
+    "id": 1,
     "title": "Paris",
     "path": "./images/paris.jpg",
     "date": "2018-11-28 13:30",
-    "location": "Louvre"
+    "location": "Louvre",
+    "categorie": "contemporains"
   },
   {
+    "id": 2,
     "title": "Paris",
     "path": "./images/paris.jpg",
     "date": "2018-11-28 13:30",
-    "location": "Louvre"
+    "location": "Louvre",
+    "categorie": "modernes"
   },
   {
+    "id": 3,
     "title": "Paris",
     "path": "./images/paris.jpg",
     "date": "2018-11-28 13:30",
-    "location": "Louvre"
+    "location": "Louvre",
+    "categorie": "contemporains"
   },
   {
+    "id": 4,
     "title": "Paris",
     "path": "./images/paris.jpg",
     "date": "2018-11-28 13:30",
-    "location": "Louvre"
+    "location": "Louvre",
+    "categorie": "contemporains"
   },
   {
+    "id": 5,
     "title": "Paris",
     "path": "./images/paris.jpg",
     "date": "2018-11-28 13:30",
-    "location": "Louvre"
+    "location": "Louvre",
+    "categorie": "contemporains"
   },
   {
+    "id": 6,
     "title": "Paris",
     "path": "./images/paris.jpg",
     "date": "2018-11-28 13:30",
-    "location": "Louvre"
+    "location": "Louvre",
+    "categorie": "contemporains"
   },
   {
+    "id": 7,
     "title": "Paris",
     "path": "./images/paris.jpg",
     "date": "2018-11-28 13:30",
-    "location": "Louvre"
+    "location": "Louvre",
+    "categorie": "contemporains"
   },
   {
+    "id": 8,
     "title": "Paris",
     "path": "./images/paris.jpg",
     "date": "2018-11-28 13:30",
-    "location": "Louvre"
+    "location": "Louvre",
+    "categorie": "contemporains"
   }
 ]
