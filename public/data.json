@@ -10,10 +10,10 @@
   {
     "id": 2,
     "title": "Paris",
-    "path": "./images/paris.jpg",
+    "path": "./images/paris_2.jpg",
     "date": "2018-11-28 13:30",
     "location": "Louvre",
-    "categorie": "modernes"
+    "categorie": "paysages"
   },
   {
     "id": 3,
@@ -37,7 +37,7 @@
     "path": "./images/paris.jpg",
     "date": "2018-11-28 13:30",
     "location": "Louvre",
-    "categorie": "contemporains"
+    "categorie": "modernes"
   },
   {
     "id": 6,
@@ -53,7 +53,7 @@
     "path": "./images/paris.jpg",
     "date": "2018-11-28 13:30",
     "location": "Louvre",
-    "categorie": "contemporains"
+    "categorie": "modernes"
   },
   {
     "id": 8,

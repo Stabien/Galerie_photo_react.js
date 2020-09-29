@@ -20,14 +20,23 @@ class DisplayImages extends Component {
 
   render() {
     const listItems = this.state.myImages.map(item => {
-      if (this.props.categorie == "tous" || item.categorie == this.props.categorie) 
+      if (this.props.categorie === "tous" || item.categorie === this.props.categorie)
         return(
-          <div key={item.id} className="col-lg-4 col-md-6">
-            <img src={item.path} alt="images"/>
+          <div key={item.id} className="col-lg-4 col-md-6"
+          data-toggle="lightbox" data-gallery="example-gallery">
+            <img src={item.path} alt={"img " + item.id} className="img-fluid"/>
           </div>
         );
+      else {
+        return(
+          <div key={item.id} className="col-lg-4 col-md-6" style={{display: "none"}}
+          data-toggle="lightbox" data-gallery="example-gallery">
+            <img src={item.path} alt={"img " + item.id} className="img-fluid"/>
+          </div>
+        );
+      }
     });
-    return <div className="row">{listItems}</div>;
+    return <div className="row no-gutters">{listItems}</div>;
   }
 }
 
