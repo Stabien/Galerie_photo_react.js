@@ -16,7 +16,14 @@ class App extends Component {
     }
   }
 
-  displayFocus() {
+  setBackgroundHeight() {
+    var body = document.body, html = document.documentElement;
+    var height = Math.max( body.scrollHeight, body.offsetHeight,
+        html.clientHeight, html.scrollHeight, html.offsetHeight );
+    $('#background-dark').css('height', height);
+  }
+
+  displayImageFocus() {
     setTimeout(() => {
       $('.img-fluid').on('click', (e) => {
         this.setState({
@@ -24,7 +31,7 @@ class App extends Component {
         });
         $('#focus-image').attr('style', 'display: block !important');
         $('#background-dark').attr('style', 'display: block !important');
-        $('#background-dark').css('height', document.body.offsetHeight + 60);
+        this.setBackgroundHeight();
       });
     }, 100);
   }
@@ -41,7 +48,10 @@ class App extends Component {
         $('#background-dark').attr('style', 'display: none !important');
       }
     });
-    this.displayFocus();
+    $(window).resize(() => {
+      this.setBackgroundHeight();
+    });
+    this.displayImageFocus();
   }
 
   render() {
