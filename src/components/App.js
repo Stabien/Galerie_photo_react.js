@@ -24,6 +24,7 @@ class App extends Component {
         });
         $('#focus-image').attr('style', 'display: block !important');
         $('#background-dark').attr('style', 'display: block !important');
+        $('#background-dark').css('height', document.body.offsetHeight + 60);
       });
     }, 100);
   }
@@ -37,7 +38,6 @@ class App extends Component {
     $('#background-dark').on('click', (e) => {
       if (e.target.id !== 'focus-image') {
         $('#focus-image').attr('style', 'display: none !important');
-        $('#background-dark').css('height', window.scrollY + 'px');
         $('#background-dark').attr('style', 'display: none !important');
       }
     });
