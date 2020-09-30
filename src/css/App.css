@@ -90,7 +90,6 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: none;
 }
 
 #background-dark {
@@ -100,16 +99,15 @@ img {
   background: black;
   width: 100%;
   opacity: 0.5;
-  display: none;
-  overflow: hidden;
+  height: 100%;
 }
 
 #focus-image img {
   border: 10px solid white;
   cursor: default;
-  width: 0px;
-  height: 0px;
   transition: all 0.3s !important;
+  width: 700px;
+  height: 400px;
 }
 
 @media (max-width: 991px) {

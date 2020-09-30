@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import DisplayImages from './DisplayImages.js';
-import FocusImage from './FocusImage.js';
 import '../css/App.css';
 import 'jquery/dist/jquery.js';
 import $ from 'jquery';
@@ -12,7 +11,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      categorie: "tous"
+      categorie: "tous",
     }
   }
 
@@ -54,7 +53,6 @@ class App extends Component {
         <div className="container">
           <DisplayImages categorie={this.state.categorie}/>
         </div>
-        <FocusImage/>
       </main>
     );
   }
