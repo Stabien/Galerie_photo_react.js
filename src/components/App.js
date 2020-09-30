@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import DisplayImages from './DisplayImages.js';
+import FocusImage from './FocusImage.js';
 import '../css/App.css';
 import 'jquery/dist/jquery.js';
 import $ from 'jquery';
@@ -11,29 +12,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      categorie: "tous",
-      focusImage: ""
+      categorie: "tous"
     }
-  }
-
-  setBackgroundHeight() {
-    var body = document.body, html = document.documentElement;
-    var height = Math.max( body.scrollHeight, body.offsetHeight,
-        html.clientHeight, html.scrollHeight, html.offsetHeight );
-    $('#background-dark').css('height', height);
-  }
-
-  displayImageFocus() {
-    setTimeout(() => {
-      $('.img-fluid').on('click', (e) => {
-        this.setState({
-          focusImage: e.target.getAttribute('src')
-        });
-        $('#focus-image').attr('style', 'display: block !important');
-        $('#background-dark').attr('style', 'display: block !important');
-        this.setBackgroundHeight();
-      });
-    }, 100);
   }
 
   componentDidMount() {
@@ -42,16 +22,6 @@ class App extends Component {
         categorie: e.target.id
       });
     });
-    $('#background-dark').on('click', (e) => {
-      if (e.target.id !== 'focus-image') {
-        $('#focus-image').attr('style', 'display: none !important');
-        $('#background-dark').attr('style', 'display: none !important');
-      }
-    });
-    $(window).resize(() => {
-      this.setBackgroundHeight();
-    });
-    this.displayImageFocus();
   }
 
   render() {
@@ -78,10 +48,7 @@ class App extends Component {
         <div className="container">
           <DisplayImages categorie={this.state.categorie}/>
         </div>
-        <div id="background-dark" style={{display: 'none'}}></div>
-        <div id="focus-image">
-          <img src={this.state.focusImage}/>
-        </div>
+        <FocusImage/>
       </main>
     );
   }
