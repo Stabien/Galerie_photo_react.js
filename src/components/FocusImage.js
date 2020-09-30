@@ -34,8 +34,21 @@ class FocusImage extends Component {
           this.setState({
             focusImage: e.target.getAttribute('src')
           });
-          $('#focus-image').attr('style', 'display: block !important');
-          $('#background-dark').attr('style', 'display: block !important');
+          $('#focus-image').css('display', 'block');
+          $('#background-dark').css('display', 'block');
+          setTimeout(() => {
+            if (this.getWidth() > 991)
+              $('#focus-image img').css({
+                'width': '700px',
+                'height': '400px'
+              });
+            else {
+              $('#focus-image img').css({
+                'width': '500px',
+                'height': '300px'
+              });
+            }
+          }, 0);
           this.setBackgroundHeight();
       }
       });
@@ -45,16 +58,37 @@ class FocusImage extends Component {
   componentDidMount() {
     $('#background-dark').on('click', (e) => {
       if (e.target.id !== 'focus-image') {
-        $('#focus-image').attr('style', 'display: none !important');
-        $('#background-dark').attr('style', 'display: none !important');
+        $('#focus-image img').css({
+          'width': '0px',
+          'height': '0px'
+        });
+        $('#focus-image').css('display', 'none');
+        $('#background-dark').css('display', 'none');
       }
     });
     $(window).resize(() => {
       this.setBackgroundHeight();
       if (this.getWidth() <= 575) {
-        $('#focus-image').attr('style', 'display: none !important');
-        $('#background-dark').attr('style', 'display: none !important');
+        $('#focus-image img').css({
+          'width': '0px',
+          'height': '0px'
+        });
+        $('#focus-image').css('display', 'none');
+        $('#background-dark').css('display', 'none');
       }
+      else if (this.getWidth() > 575 && this.getWidth() <= 991) {
+        $('#focus-image img').css({
+          'width': '500px',
+          'height': '300px'
+        });
+      }
+      else {
+        $('#focus-image img').css({
+          'width': '700px',
+          'height': '400px'
+        });
+      }
+
     });
     this.displayImageFocus();
   }
@@ -64,7 +98,7 @@ class FocusImage extends Component {
       <div id="return-container">
         <div id="background-dark" style={{display: 'none'}}></div>
         <div id="focus-image">
-          <img src={this.state.focusImage}/>
+          <img src={this.state.focusImage} alt="focus"/>
         </div>
       </div>
     );

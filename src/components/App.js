@@ -25,7 +25,7 @@ class App extends Component {
         'background': 'white',
         'color': 'black'
       });
-      e.target.style.background = '#00AF76';
+      e.target.style.background = '#0EC5DC';
       e.target.style.color = 'white';
     });
   }
