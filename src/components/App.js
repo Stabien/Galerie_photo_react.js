@@ -21,6 +21,12 @@ class App extends Component {
       this.setState({
         categorie: e.target.id
       });
+      $('li').css({
+        'background': 'white',
+        'color': 'black'
+      });
+      e.target.style.background = '#00AF76';
+      e.target.style.color = 'white';
     });
   }
 

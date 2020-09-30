@@ -52,9 +52,11 @@ nav ul {
 
 nav ul li {
   list-style: none;
-  margin: 1.5em 3em;
+  margin: 1em 2em;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.2s !important;
+  border-radius: 30px;
+  padding: 0.5em 1em !important;
 }
 
 img {
