@@ -45,8 +45,10 @@ class DisplayImages extends Component {
       return(
         <div>
           <div className="row no-gutters">{listItems}</div>
-          <FocusImage display={this.callBackFocusImage}
-          path={this.state.pathFocusImage}/>
+          <FocusImage
+            display={this.callBackFocusImage}
+            path={this.state.pathFocusImage}
+          />
         </div>
       );
     else

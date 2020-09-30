@@ -10,10 +10,21 @@ class FocusImage extends Component {
     this.props.display(false);
   }
 
+  setBackgroundHeight() {
+    var body = document.body, html = document.documentElement;
+    var height = Math.max( body.scrollHeight, body.offsetHeight,
+                           html.clientHeight, html.scrollHeight, html.offsetHeight );
+    return height;
+  }
+
   render() {
     return(
       <div id="return-container">
-        <div id="background-dark" onClick={() => this.sendDataToParent()}></div>
+        <div
+          id="background-dark"
+          onClick={() => this.sendDataToParent()}
+          style={{height: this.setBackgroundHeight()}}>
+        </div>
         <div id="focus-image">
           <img src={this.props.path} alt="focus"/>
         </div>
