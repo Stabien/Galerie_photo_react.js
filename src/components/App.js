@@ -14,13 +14,12 @@ class App extends Component {
     this.state = {
       categorie: "tous"
     }
+    this.callBackNavbar = this.callBackNavbar.bind(this);
   }
 
-  componentDidMount() {
-    $('li').on('click', (e) => {
-      this.setState({
-        categorie: e.target.id
-      });
+  callBackNavbar(displayData) {
+    this.setState({
+      categorie: displayData
     });
   }
 
@@ -28,7 +27,7 @@ class App extends Component {
     return (
       <main className="page bg-white">
         <h1 id="title">GALERIE</h1>
-        <Navbar/>
+        <Navbar categorieName={this.callBackNavbar}/>
         <div className="container">
           <DisplayImages categorie={this.state.categorie}/>
         </div>

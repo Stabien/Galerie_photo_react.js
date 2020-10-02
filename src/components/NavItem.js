@@ -3,9 +3,6 @@ import React, { Component } from 'react';
 class NavItem extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      activeNavItem: ""
-    }
     this.navItemRef = [React.createRef()];
   }
 
@@ -16,9 +13,7 @@ class NavItem extends Component {
     }
     e.target.style.background = "#0EC5DC";
     e.target.style.color = "white";
-    this.setState({
-      activeNavItem: e.target.id
-    });
+    this.props.categorieName(e.target.id);
   }
 
   render() {

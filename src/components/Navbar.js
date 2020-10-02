@@ -4,8 +4,11 @@ import NavItem from './NavItem.js'
 class Navbar extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-    }
+    this.callBackNavItem = this.callBackNavItem.bind(this);
+  }
+
+  callBackNavItem(displayData) {
+    this.props.categorieName(displayData);
   }
 
   render() {
@@ -19,7 +22,7 @@ class Navbar extends Component {
           </button>
         </div>
         <nav className="collapse navbar-collapse justify-content-end" id="navbar-content">
-          <NavItem/>
+          <NavItem categorieName={this.callBackNavItem}/>
         </nav>
       </div>
     )
