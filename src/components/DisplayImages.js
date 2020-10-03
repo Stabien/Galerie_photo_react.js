@@ -22,15 +22,26 @@ class DisplayImages extends Component {
       });
   }
 
+  getMaxWidth() {
+    return Math.max(
+      document.body.scrollWidth,
+      document.documentElement.scrollWidth,
+      document.body.offsetWidth,
+      document.documentElement.offsetWidth,
+      document.documentElement.clientWidth
+    );
+  }
+
   callBackFocusImage(displayData) {
-    this.setState({
-      displayFocusImage: displayData
-    });
+    if (this.getMaxWidth() > 575)
+      this.setState({
+        displayFocusImage: displayData
+      });
   }
 
   render() {
     const listItems = this.state.myImages.map(item => {
-      if (this.props.categorie === "tous" || item.categorie === this.props.categorie)
+      if (this.props.categorie === "tout" || item.categorie === this.props.categorie)
         return(
           <div key={item.id} className="col-lg-4 col-md-6">
             <img src={item.path} alt={"img " + item.id} className="img-fluid"

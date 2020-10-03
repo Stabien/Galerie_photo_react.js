@@ -17,7 +17,7 @@ class NavItem extends Component {
   }
 
   render() {
-    const categories = ["tous", "modernes", "contemporains", "portraits", "paysages"];
+    const categories = ["tout", "modernes", "contemporains", "portraits", "paysages"];
     const listItems = categories.map((item, index) => {
       return(
         <li

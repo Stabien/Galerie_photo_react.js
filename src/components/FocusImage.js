@@ -4,9 +4,8 @@ import 'jquery/dist/jquery.js';
 class FocusImage extends Component {
   setBackgroundHeight() {
     var body = document.body, html = document.documentElement;
-    var height = Math.max(body.scrollHeight, body.offsetHeight,
-                          html.clientHeight, html.scrollHeight, html.offsetHeight);
-    return height;
+    return Math.max(body.scrollHeight, body.offsetHeight,
+                    html.clientHeight, html.scrollHeight, html.offsetHeight);
   }
 
   render() {

@@ -3,7 +3,6 @@ import DisplayImages from './DisplayImages.js';
 import Navbar from './Navbar.js';
 import '../css/App.css';
 import 'jquery/dist/jquery.js';
-import $ from 'jquery';
 import 'popper.js/dist/umd/popper.js';
 import 'bootstrap/dist/js/bootstrap.js';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -12,7 +11,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      categorie: "tous"
+      categorie: "tout"
     }
     this.callBackNavbar = this.callBackNavbar.bind(this);
   }
@@ -26,7 +25,7 @@ class App extends Component {
   render() {
     return (
       <main className="page bg-white">
-        <h1 id="title">GALERIE</h1>
+        <h1 id="title">GALERIE / TEMPLATE</h1>
         <Navbar categorieName={this.callBackNavbar}/>
         <div className="container">
           <DisplayImages categorie={this.state.categorie}/>
