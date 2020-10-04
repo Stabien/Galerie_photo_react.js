@@ -15,7 +15,7 @@ class Navbar extends Component {
     return(
       <div className="navbar navbar-expand-lg container" id="nav_container">
         <div id="responsive-menu-container">
-          <h1 id="title-md">GALERIE</h1>
+          <h1 id="title-md">Galerie</h1>
           <button className="navbar-toggler" type="button"
           data-toggle="collapse" data-target="#navbar-content">
             <span className="navbar-toggler-icon"></span>

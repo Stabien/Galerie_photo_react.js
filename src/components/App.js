@@ -25,7 +25,7 @@ class App extends Component {
   render() {
     return (
       <main className="page bg-white">
-        <h1 id="title">GALERIE / TEMPLATE</h1>
+        <h1 id="title">Galerie - Template</h1>
         <Navbar categorieName={this.callBackNavbar}/>
         <div className="container">
           <DisplayImages categorie={this.state.categorie}/>
